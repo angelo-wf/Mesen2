@@ -78,7 +78,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -qy
-          sudo apt-get install -qy libsdl2-dev # The compilers are already installed on GitHub's runners.
+          sudo apt-get install -qy libsdl2-dev libx11-dev # The compilers are already installed on GitHub's runners.
 
       - name: Execute unit tests
         run: dotnet test --nologo
@@ -112,7 +112,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -qy
-          sudo apt-get install -qy libsdl2-dev libfuse2 # The compilers are already installed on GitHub's runners.
+          sudo apt-get install -qy libsdl2-dev libfuse2 libx11-dev # The compilers are already installed on GitHub's runners.
 
       - name: Build Mesen (AppImage)
         run: |
